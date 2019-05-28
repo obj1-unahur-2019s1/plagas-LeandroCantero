@@ -18,8 +18,8 @@ class PlagaDeCucarachas inherits Plaga{
 	override method transmiteEnfermedades(){return super() and self.pesoPromedio() >= 10}
 	override method danioAtaque(){return poblacion/2}
 	override method atacarA(elemento){
-		super(elemento)
 		pesoPromedio += 2
+		super(elemento)
 	}
 }
 
@@ -30,6 +30,7 @@ class PlagaDePulgas inherits Plaga{
 class PlagaDeGarrapatas inherits PlagaDePulgas{
 	override method atacarA(elemento){
 		poblacion *= 1.20
+		elemento.recibeAtaque(self)
 	}
 }
 
