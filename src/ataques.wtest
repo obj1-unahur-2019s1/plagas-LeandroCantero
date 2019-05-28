@@ -1,0 +1,12 @@
+import Plagas.*
+import Elementos.*
+
+test "ataques" {
+	var pulga1 = new PlagaDePulgas()
+	pulga1.poblacion(10)
+	var hogar1 = new Hogar()
+	hogar1.mugre(5)
+	pulga1.atacarA(hogar1)
+	assert.equals(25, hogar1.mugre())
+
+}
